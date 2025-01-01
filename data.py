@@ -9,16 +9,16 @@ detector = HandDetector(maxHands=1)
 offset = 20
 imgsize = 512
 
-folder = "Data/A" #here just change to whatever file you are trying to capture data to
+folder = "Data/anyLetterFolder" # Here, like instructed in the README file just change to whatever file you are trying to capture data to
 counter = 0
 
 while True:
     success, img = capture.read()
     hands, img = detector.findHands(img)
-    # cropping
+    # Cropping
     if hands:
-        hand = hands[0]  # the one hand we have
-        # bounding box info
+        hand = hands[0]  # The one hand we have
+        # Bounding box info
         x, y, w, h = hand['bbox']
 
         imgWhite = np.ones((imgsize, imgsize, 3), np.uint8) * 255
@@ -47,7 +47,7 @@ while True:
         cv2.imshow("imageWhite", imgWhite)
 
     cv2.imshow("Image", img)
-    key = cv2.waitKey(1)  # second delay
+    key = cv2.waitKey(1)  # One Second delay
     if key == ord("s"):
         if 'imgWhite' in locals():  # Check if imgWhite exists
             counter += 1
