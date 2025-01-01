@@ -45,8 +45,7 @@ This project is a hand sign recognition system designed to identify hand signs f
 ## How to Set Up
 
 1. **Folder Structure:**
-   - Create a folder named `Data`.
-   - Under the `Data` folder, create subfolders named A-Z.
+   - Under the `Data` folder, delete the tempFile file and create subfolders named A-Z.
 
 2. **Data Collection:**
    - Use the `data.py` script to capture images for each letter as described above.
